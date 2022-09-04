@@ -6,3 +6,4 @@ COPY index.html /usr/share/nginx/html/index.html
 COPY nginx.conf /etc/nginx/http.d/default.conf
 CMD nginx -g "daemon off; error_log /dev/stderr;"
 ENTRYPOINT ["/sbin/tini", "--"]
+STOPSIGNAL SIGQUIT
